@@ -24,18 +24,11 @@ $(function() {
         })
     };
 
-        function loadTweets() {
-        $.ajax({
-            method: 'GET',
-            url: "/tweets"
-        }).done(function(tweets) {
-            renderTweets(tweets);
-        });
-    }
 
     function createTweetElement(tweetData) {
-        console.log("we are in createTweetElement");
-        console.log(tweetData);
+      console.log("we are in createTweetElement");
+      console.log(tweetData);
+        //console.log($(tweetData.user.avatars));
         return `
         <article>
           <header>
@@ -57,6 +50,26 @@ $(function() {
 
     }
 
+    //   function communicateXhr(method, url, data) {
+    //     return $.ajax({method: method+",", url: url+",", data: data+","});
+    //   }
+
+    //   function loadTweets(){
+    //   communicateXhr("'GET'", "'tweets'")
+    //     .done(renderTweets(tweets));
+    // }
+    // loadTweets();
+
+
+
+    function loadTweets() {
+        $.ajax({
+            method: 'GET',
+            url: "/tweets"
+        }).done(function(tweets) {
+            renderTweets(tweets);
+        });
+    }
     loadTweets();
 
     $('.tweet-form').on('submit', function(event) {
@@ -75,18 +88,15 @@ $(function() {
             $.ajax({
                 method: 'POST',
                 url: '/tweets',
-                data: input,
-                success: function(result) {
-                    console.log(result);
-                    var newTweet = createTweetElement(result);
-                    form[0].reset();
-                    $('.tweets').prepend(newTweet);
-                    $('.counter').html('140');
-                },
-                error: function(error) {
-                    console.log("got an error " + error);
-
-                }
+                data: input
+            }).done(function(tweet) {
+                console.log("we are here");
+                var newTweet = createTweetElement(tweet);
+                console.log("after calling ");
+                console.log(newTweet);
+               // form[0].reset();
+                //$('.tweets').prepend(tweet);
+                //$('.counter').html('140');
             });
         }
     });

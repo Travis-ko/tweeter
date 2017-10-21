@@ -36,8 +36,10 @@ module.exports = function(DataHelpers) {
       if (err) {
         res.status(500).json({ error: err.message });
       } else {
+        // console.log("rohit test ");
+        // console.log(tweet);
         // res.status(201).send();
-        res.status(201).json(newTweet);
+        res.status(201).json(tweet);
       }
     });
   });
