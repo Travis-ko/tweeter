@@ -15,3 +15,81 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+- body-parser
+- chance
+- md5
+- mongodb
+
+
+## Database format / Premade entires
+
+### tweets
+```JSON
+[
+  {
+    "_id" : ObjectId("59ea8cc5921da60a43e00319"),
+    "user": {
+      "name": "Newton",
+      "avatars": {
+        "small":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_50.png",
+        "regular": "https://vanillicon.com/788e533873e80d2002fa14e1412b4188.png",
+        "large":   "https://vanillicon.com/788e533873e80d2002fa14e1412b4188_200.png"
+      },
+      "handle": "@SirIsaac"
+    },
+    "content": {
+      "text": "If I have seen further it is by standing on the shoulders of giants"
+    },
+    "created_at": 1461116232227,
+    "likes" : []
+  },
+  {
+    "_id" : ObjectId("59ea98b27ae17a10c20c09f0"),
+    "user": {
+      "name": "Descartes",
+      "avatars": {
+        "small":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_50.png",
+        "regular": "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc.png",
+        "large":   "https://vanillicon.com/7b89b0d8280b93e2ba68841436c0bebc_200.png"
+      },
+      "handle": "@rd" },
+    "content": {
+      "text": "Je pense , donc je suis"
+    },
+    "created_at": 1461113959088,
+    "likes" : [
+      "@SirIsaac",
+      "@johann49"
+    ]
+  },
+  {
+    "_id": ObjectId("59ebc8cea3e2920d0a55ac86"),
+    "user": {
+      "name": "Johann von Goethe",
+      "avatars": {
+        "small":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_50.png",
+        "regular": "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1.png",
+        "large":   "https://vanillicon.com/d55cf8e18b47d4baaf60c006a0de39e1_200.png"
+      },
+      "handle": "@johann49"
+    },
+    "content": {
+      "text": "Es ist nichts schrecklicher als eine tätige Unwissenheit."
+    },
+    "created_at": 1461113796368,
+    "likes" : [
+      "@rd"
+    ]
+  }
+]
+```
+
+## Usage
+
+Visit the home page at http://localhost:8080/
+
+Enter a message by clicking the tweet form or by clicking the compose button in the navbar.
+
+Hit Tweet to generate your tweet with a randomized handle, username and image.
+
+tweets are displayed in reverse-chronological order, scroll down to see past tweets that have made in the past!
