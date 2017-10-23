@@ -87,9 +87,13 @@ This repository is the starter code for the project: Students will fork and clon
 ## Usage
 
 Visit the home page at http://localhost:8080/
+!["landing page"](https://github.com/Travis-ko/tweeter/blob/master/docs/tweeter-1.png?raw=true)
 
 Enter a message by clicking the tweet form or by clicking the compose button in the navbar.
+!["click the compose button"](https://github.com/Travis-ko/tweeter/blob/master/docs/tweeter-2.png?raw=true)
 
 Hit Tweet to generate your tweet with a randomized handle, username and image.
+!["Hit tweet"](https://github.com/Travis-ko/tweeter/blob/master/docs/tweeter-3.png?raw=true)
 
 tweets are displayed in reverse-chronological order, scroll down to see past tweets that have made in the past!
+!["look at all your past tweeter fun"](https://github.com/Travis-ko/tweeter/blob/master/docs/tweeter-4.png?raw=true)
